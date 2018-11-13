@@ -10,8 +10,4 @@ export default App.init({
   ...app,
   router,
   store,
-
-  mounted() {
-    console.log(this.$route);
-  },
 });

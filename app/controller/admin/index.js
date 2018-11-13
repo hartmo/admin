@@ -5,7 +5,6 @@ class AppController extends Controller {
     await ctx.render('app/app.js', {
       url: ctx.url.replace(/\/app/),
     });
-    console.log(ctx.url.replace(/\/app/));
   }
 }
 
