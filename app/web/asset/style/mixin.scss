@@ -1,0 +1,4 @@
+// 转换rem
+@function px2rem($px) {
+	@return $px / 100 *1rem;
+}
