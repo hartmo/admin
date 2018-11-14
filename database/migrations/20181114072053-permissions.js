@@ -1,7 +1,7 @@
 'use strict';
 
+// 创建 permissions 表
 module.exports = {
-  // 在执行数据库升级时调用的函数，创建 permissions 表
   up: async (queryInterface, Sequelize) => {
     const { INTEGER, DATE, STRING, TEXT } = Sequelize;
     await queryInterface.createTable('permissions', {
