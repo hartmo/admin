@@ -1,7 +1,6 @@
 module.exports = (app) => {
   const { STRING, INTEGER, DATE } = app.Sequelize;
-
-  const users = app.model.define('users', {
+  const Users = app.model.define('users', {
     id: {
       type: INTEGER,
       primaryKey: true,
@@ -17,8 +16,7 @@ module.exports = (app) => {
     ip: STRING(100),
     state: INTEGER,
     session: STRING(100),
-    lastdate: DATE,
+    lastlogin_at: DATE,
   });
-
-  return users;
+  return Users;
 };
