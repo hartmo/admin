@@ -1,6 +1,6 @@
 <template>
   <el-header class="m-header">
-    <el-dropdown>
+    <el-dropdown class="header-icon">
       <i class="el-icon-setting"
          style="margin-right: 15px"></i>
       <el-dropdown-menu slot="dropdown">

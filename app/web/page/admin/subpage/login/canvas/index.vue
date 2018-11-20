@@ -1,6 +1,6 @@
 <template>
-  <div>
-   登陆一个试试吗
+  <div class="login-canvas">
+    <canvas ref="canvas" :width="width" :height="height"></canvas>
   </div>
 </template>
 

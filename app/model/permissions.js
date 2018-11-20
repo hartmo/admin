@@ -1,6 +1,6 @@
 module.exports = (app) => {
   const { STRING, INTEGER, DATE, TEXT } = app.Sequelize;
-  const Users = app.model.define('users', {
+  const Permissions = app.model.define('permissions', {
     id: {
       type: INTEGER,
       primaryKey: true,
@@ -12,5 +12,5 @@ module.exports = (app) => {
     update_at: DATE,
     created_at: DATE,
   });
-  return Users;
+  return Permissions;
 };

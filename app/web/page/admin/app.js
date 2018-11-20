@@ -6,7 +6,7 @@ import App from 'app';
 sync(store, router);
 
 export default App.init({
-  base: '/admin',
+  base: '/',
   ...app,
   router,
   store,

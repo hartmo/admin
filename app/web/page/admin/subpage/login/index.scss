@@ -1,0 +1,12 @@
+.login-warp {
+	display: flex;
+	justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+	.demo-ruleForm {
+		width: 60%;
+		text-align: center;
+	}
+}

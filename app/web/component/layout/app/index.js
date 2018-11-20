@@ -1,7 +1,7 @@
 import MainLayout from './main';
 
 const tpl = '<div id="app"><MainLayout><div slot="main"><slot></slot></div></MainLayout></div>';
-
+import '../axios';
 export default {
   name: 'AppLayout',
   props: [ 'title', 'description', 'keywords' ],
@@ -26,6 +26,7 @@ export default {
                 <html lang="en">
                   <head>
                     <title>{{vTitle}}</title>
+                    <meta name="keywords" :content="vKeywords">
                     <meta name="keywords" :content="vKeywords">
                     <meta name="description" :content="vDescription">
                     <meta http-equiv="content-type" content="text/html;charset=utf-8">

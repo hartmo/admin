@@ -1,4 +1,4 @@
-const axios = require('axios');
+
 export default {
   name: 'index',
   mounted() {
@@ -6,13 +6,12 @@ export default {
   watch: {},
   data() {
     return {
+      indexDate: null
     };
   },
-  components: {},
+  components: {
+  },
   computed: {
-    indexDate() {
-      return this.$router.options.routes;
-    }
   },
   methods: {},
 };
