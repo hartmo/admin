@@ -3,11 +3,13 @@
 	text-align: right;
 	font-size: px2rem(12);
 	background: #6495ed;
-	color: #fff;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	.header-icon {
 		color: #fff;
+	}
+	.user-name {
+		margin-left: 5px;
 	}
 }
