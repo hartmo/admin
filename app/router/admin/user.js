@@ -2,5 +2,5 @@
 
 module.exports = app => {
   const { router } = app;
-  router.get('user/findAll', app.controller.admin.user.findAll);
+  router.get('/api/admin/user/findAll', app.controller.admin.user.findAll);
 };

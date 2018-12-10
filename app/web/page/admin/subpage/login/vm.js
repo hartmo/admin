@@ -5,7 +5,7 @@ export default {
   watch: {},
   data() {
     return {
-      numberValidateForm: {
+      loginValidateForm: {
         name: null,
         password: null,
       },
@@ -19,8 +19,8 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          console.log(this.numberValidateForm);
-          // src.post(api.login, this.numberValidateForm).then((res) => {
+          console.log(this.loginValidateForm);
+          // src.post(api.login, this.loginValidateForm).then((res) => {
           // 	if (res.status !== 10000) {
           // 		this.$message.error(res);
           // 	} else {

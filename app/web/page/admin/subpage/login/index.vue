@@ -3,7 +3,7 @@
     <canvasView :width="1000"
                 :height="1000"></canvasView>
     <el-form :model="numberValidateForm"
-             ref="numberValidateForm"
+             ref="loginValidateForm"
              label-width="100px"
              class="demo-ruleForm">
       <el-form-item>
@@ -29,7 +29,7 @@
       </el-form-item>
       <el-form-item class="center">
         <el-button type="primary"
-                   @click="submitForm('numberValidateForm')">提 交</el-button>
+                   @click="submitForm('loginValidateForm')">提 交</el-button>
       </el-form-item>
     </el-form>
   </div>

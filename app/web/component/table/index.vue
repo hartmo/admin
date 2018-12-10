@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div class="table-list">
+    <div class="header-list">
+      <slot name="header"></slot>
+    </div>
     <el-table :data="value"
               style="width: 100%">
       <slot></slot>
@@ -15,7 +18,7 @@
   </div>
 </template>
 
-<style lang="scss" rel="stylesheet/scss">
+<style lang="scss" rel="stylesheet/scss" scoped>
   @import './index.scss';
 </style>
 <script type="text/babel">
