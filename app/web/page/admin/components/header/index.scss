@@ -2,10 +2,11 @@
 .m-header {
 	text-align: right;
 	font-size: px2rem(12);
-	background: #6495ed;
+	background: #209effcb;
 	display: flex;
 	justify-content: flex-end;
-	align-items: center;
+  align-items: center;
+  height: 56px !important;
 	.header-icon {
 		color: #fff;
 	}

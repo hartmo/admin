@@ -1,0 +1,27 @@
+.booklist {
+	width: 100%;
+	li {
+		float: left;
+		width: 150px;
+		height: 180px;
+		img {
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+}
+.p-r {
+	position: relative;
+}
+.add {
+	.el-upload-dragger {
+		width: 180px !important;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+    line-height: 180px;
+    font-size: 40px;
+	}
+}

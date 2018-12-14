@@ -1,5 +1,4 @@
 import MainLayout from './main';
-
 const tpl = '<div id="app"><MainLayout><div slot="main"><slot></slot></div></MainLayout></div>';
 import '../axios';
 export default {
@@ -10,13 +9,13 @@ export default {
   },
   computed: {
     vTitle() {
-      return this.$root.title || this.title || '用户管理后台';
+      return this.$root.title || this.title || '管理后台';
     },
     vKeywords() {
-      return this.$root.keywords || this.keywords || '用户管理后台';
+      return this.$root.keywords || this.keywords || '管理后台';
     },
     vDescription() {
-      return this.$root.description || this.description || 'node用户管理后台';
+      return this.$root.description || this.description || 'node管理后台';
     },
     baseClass() {
       return this.$root.baseClass;

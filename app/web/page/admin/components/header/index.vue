@@ -3,7 +3,7 @@
     <el-dropdown>
       <div class="header-icon">
         <i class="el-icon-setting"></i>
-        <span class="user-name">王小虎</span>
+        <span class="user-name">momo</span>
       </div>
       <el-dropdown-menu slot="dropdown">
         <el-dropdown-item>修改密码</el-dropdown-item>

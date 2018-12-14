@@ -1,5 +1,7 @@
 module.exports = app => {
-  app.beforeStart(async function() {
-    await app.model.sync({ force: true });
-  });
+  if (app.config.env === 'local') {
+    app.beforeStart(async function() {
+      await app.model.sync({ force: false });
+    });
+  }
 };

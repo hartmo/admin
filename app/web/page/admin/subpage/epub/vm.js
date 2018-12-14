@@ -1,11 +1,12 @@
 
 export default {
-  name: 'index',
+  name: 'epub',
   mounted() {
   },
   watch: {},
   data() {
     return {
+      indexDate: null
     };
   },
   components: {

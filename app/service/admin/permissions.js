@@ -2,7 +2,7 @@ const Service = require('egg').Service;
 
 class UserService extends Service {
   /**
-   * 查找所有的用户列表
+   * 查找所有的权限列表
    * @param {Number} num  //搜索条数
    * @param {Number} size  //搜索页码
    */

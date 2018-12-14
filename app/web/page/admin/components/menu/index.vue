@@ -1,14 +1,15 @@
 <template>
-  <el-aside width="200px"
+  <el-aside width="201px"
             class="m-menu"
             ref="menuView"
             :style="{'height':height}">
     <el-menu :default-openeds="['1']"
              @select="handleSelect"
-             background-color="#191970"
+             background-color="#209effcb"
              text-color="#fff"
-             active-text-color="#ffd04b">
+             active-text-color="#fff">
       <el-menu-item index="">首页</el-menu-item>
+      <el-menu-item index="/epub">小说阅读</el-menu-item>
     </el-menu>
   </el-aside>
 </template>
