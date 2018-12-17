@@ -1,20 +1,32 @@
+import { loadEpubJs, readBook } from 'asset/js/asyncLoadJs.js';
 export default {
   name: 'epub',
-  mounted() {},
+  mounted() {
+    loadEpubJs().then(() => {
+      this.init();
+    });
+  },
   watch: {},
   data() {
-    return {};
+    return {
+      epublist: [],
+    };
   },
   components: {},
   computed: {},
   methods: {
+    init() {
+      this.$http.get('/epub/list').then(({ data }) => {
+        this.epublist = data.data;
+      });
+    },
+
     handlePreview(file) {
       console.log(file);
     },
     onSuccess(file) {},
     beforeAvatarUpload(file) {
-      console.log(file.size / 1024 / 1024);
-      console.log(file);
+      return true;
     },
     uploadSuccess(response, file, fileList) {
       console.log('file', file);

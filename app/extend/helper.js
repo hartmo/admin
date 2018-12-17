@@ -28,10 +28,10 @@ module.exports = {
         ws.on('error', reject);
         ws.on(
           'finish',
-          resolve(this.message(1, { name: stream.filename, path: pathPublic, message: '上传成功' }))
+          resolve(this.message(1, { name: stream.filename, path: pathPublic, targetPath, message: '上传成功' }))
         );
       } else {
-        return resolve(this.message(0, { pathPublic, message: '已存在文件' }));
+        return resolve(this.message(0, { pathPublic, targetPath, message: '已存在文件' }));
       }
     });
   },

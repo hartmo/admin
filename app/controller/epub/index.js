@@ -4,11 +4,14 @@ const path = require('path');
 const pump = require('pump');
 const sendToWormhole = require('stream-wormhole');
 class AppController extends Controller {
-  async index() {
+  async list() {
     const { ctx } = this;
-    await ctx.render('epub/index.js', {
-      title: 'epub阅读器',
+    const data = await ctx.service.admin.book.findAll(1, 25).then(res => {
+      return res;
     });
+    ctx.body = {
+      data
+    };
   }
   async upload() {
     const { ctx } = this;
@@ -20,6 +23,8 @@ class AppController extends Controller {
       result = await ctx.helper
         .uploadTempFile(stream, ctx.app.config.baseDir, 'epub') // 上传书本
         .then((data) => {
+          setTimeout(() => {
+          }, 2000);
           if (data.status === 1) {
             return ctx.service.admin.book
               .create({ path: data.data.path, name: data.data.name, state: 1 }) // 创建书本

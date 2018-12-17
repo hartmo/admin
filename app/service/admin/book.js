@@ -16,7 +16,7 @@ class UserService extends Service {
   async find(name) {
     const { ctx } = this;
     return await ctx.model.Book.find({ name }).then((res) => {
-      return { id: res.id, name: res.name, state: res.state };
+      return { id: res.id, name: res.name, state: res.state, creator: res.creator, date: res.date, description: res.description, images: res.images };
     });
   }
   /**
@@ -26,8 +26,10 @@ class UserService extends Service {
    */
   async findAll(num, size) {
     const { ctx } = this;
-    const query = { limit: Number(num * (size - 1)), offset: Number(num * size) };
-    return await ctx.model.Book.findAll(query);
+    const limit = Number(num * (size - 1)) >= 0 ? Number(num * (size - 1)) : 0;
+    const offset = Number(num * size) > 0 ? Number(num * size) : num;
+    const query = { limit, offset };
+    return await ctx.model.Book.findAll();
   }
   /**
    * 创建数据
@@ -36,7 +38,7 @@ class UserService extends Service {
   async create(data) {
     const { ctx } = this;
     return await ctx.model.Book.create(data).then((res) => {
-      return { id: res.id, name: res.name, state: res.state };
+      return { id: res.id, name: res.name, state: res.state, creator: res.creator, date: res.date, description: res.description, images: res.images };
     });
   }
   /**
