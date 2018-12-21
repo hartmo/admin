@@ -1,0 +1,13 @@
+.p-r {
+	position: relative;
+	.add {
+    color: blue;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 99;
+  }
+}
+.refresh{
+  color: blue;
+}

@@ -1,7 +1,15 @@
 <template>
   <div>
-    <el-table :data="value"
+    <el-table :data="tableArr"
               style="width: 100%">
+
+      <el-table-column type="index"
+                       label="序号"
+                       width="50">
+        <template slot-scope="scope">
+          {{((current.currentPage -1) * current.pageSizes) + scope.$index + 1}}
+        </template>
+      </el-table-column>
       <slot></slot>
     </el-table>
     <el-pagination @size-change="handleSizeChange"
@@ -16,7 +24,7 @@
 </template>
 
 <style lang="scss" rel="stylesheet/scss">
-  @import './index.scss';
+  @import "./index.scss";
 </style>
 <script type="text/babel">
   import vm from './vm';

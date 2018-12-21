@@ -17,7 +17,6 @@ export default {
       this.height = document.body.clientHeight + 'px';
     },
     handleSelect(key, keyPath) {
-      console.log(this.$router);
       this.$router.push({ path: key });
     },
   },

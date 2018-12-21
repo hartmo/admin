@@ -10,6 +10,7 @@
              active-text-color="#fff">
       <el-menu-item index="">首页</el-menu-item>
       <el-menu-item index="/epub">小说阅读</el-menu-item>
+      <el-menu-item index="/pcegg">公式计算</el-menu-item>
     </el-menu>
   </el-aside>
 </template>

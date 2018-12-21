@@ -3,12 +3,11 @@ const moment = require('moment');
 const iconv = require('iconv-lite');
 const cheerio = require('cheerio');
 class getHtmlService extends Service {
-  async index(url, format) {
+  async index(url, options, format) {
     const { ctx } = this;
-    const result = await ctx.curl(url, {
-      // 3 秒超时
-      timeout: 3000,
-    });
+    // const headers = ctx.headers();
+    options.headers = Object.assign(options, {});
+    const result = await ctx.curl(url, options);
     const html = iconv.decode(result.res.data, format);
     const $ = cheerio.load(html, { decodeEntities: false });
     return $;
