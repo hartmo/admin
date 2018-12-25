@@ -1,8 +1,23 @@
 .m-menu {
-	background: #209effcb;
+	background: #545c64;
 	border-right: 1px solid #dedede;
 	padding-bottom: px2rem(30);
+	border: none;
 }
 .el-menu {
 	border: none;
+	width: auto !important;
+}
+.icon {
+	color: #fff;
+}
+.collapse-view {
+	width: 200px !important;
+}
+.el-icon-arrow-left {
+	width: 100%;
+	text-align: center;
+}
+.el-icon-arrow-left {
+	padding-left: 25px;
 }

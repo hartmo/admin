@@ -1,15 +1,21 @@
 <template>
-  <el-aside width="201px"
-            class="m-menu"
+  <el-aside class="m-menu"
             ref="menuView"
             :style="{'height':height}">
     <el-menu :default-openeds="['1']"
              @select="handleSelect"
-             background-color="#209effcb"
+             :class="[{'collapse-view':!isCollapse}]"
+             background-color="#545c64"
              text-color="#fff"
-             active-text-color="#fff">
-      <el-menu-item index="">首页</el-menu-item>
-      <el-menu-item index="/epub">小说阅读</el-menu-item>
+             active-text-color="#ffd04b"
+             :collapse="isCollapse">
+      <el-menu-item index="collapse" :class="[{'el-icon-arrow-right':isCollapse},{'el-icon-arrow-left':!isCollapse}]"></el-menu-item>
+      <el-menu-item :index="item.path"
+                    v-for="(item,index) in menuList"
+                    :key="index">
+        <i class="icon" :class="item.icon"></i>
+        <span>{{item.title}}</span>
+      </el-menu-item>
     </el-menu>
   </el-aside>
 </template>

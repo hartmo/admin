@@ -7,10 +7,12 @@ export default {
   name: 'index',
   router,
   mounted() {
+    this.height = document.body.clientHeight - 100 + 'px';
   },
   watch: {},
   data() {
     return {
+      height: '987px'
     };
   },
   components: {

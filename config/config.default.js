@@ -55,5 +55,9 @@ module.exports = (app) => {
     formLimit: '100mb',
     jsonLimit: '100mb',
   };
+  exports.cors = {
+    credentials: true,
+    origin: () => '*',
+  };
   return exports;
 };

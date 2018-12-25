@@ -8,16 +8,24 @@ export default {
   data() {
     return {
       height: '968px',
+      isCollapse: false,
     };
   },
   components: {},
-  computed: {},
+  computed: {
+    menuList() {
+      return this.$router.options.routes;
+    },
+  },
   methods: {
     init() {
       this.height = document.body.clientHeight + 'px';
     },
     handleSelect(key, keyPath) {
-      console.log(this.$router);
+      if (key === 'collapse') {
+        this.isCollapse = !this.isCollapse;
+        return;
+      }
       this.$router.push({ path: key });
     },
   },
