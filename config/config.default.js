@@ -7,7 +7,7 @@ module.exports = (app) => {
   //   '/favicon.ico': fs.readFileSync(path.join(app.baseDir, 'app/web/asset/images/favicon.ico'))
   // };
   exports.view = {
-    cache: false,
+    cache: true,
   };
 
   exports.vuessr = {

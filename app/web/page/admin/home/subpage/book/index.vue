@@ -35,7 +35,7 @@
         <div class="book-box"
              @click="handleClick(item)">
           <div class="flex">
-            <img :src="books.host + item.cover"
+            <img :src="item.cover"
                  alt="">
             <div class="right">
               <div class="title">{{item.title}}</div>

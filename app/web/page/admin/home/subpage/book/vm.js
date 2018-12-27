@@ -10,8 +10,8 @@ export default {
       outerVisible: false,
       activeNames: [ 1 ],
       pagination: {
-        sizes: [ 20, 50, 100, 150 ],
-        limit: 20,
+        sizes: [ 30, 100, 150 ],
+        limit: 30,
         page: 0,
         total: 0,
       },
@@ -29,7 +29,7 @@ export default {
       },
       searchList: {
         start: 0,
-        limit: 20,
+        limit: 30,
         major: '',
         type: 'hot',
       },
@@ -38,7 +38,6 @@ export default {
   components: {},
   computed: {
     chapters() {
-      console.log(this.bookDetails.menu.mixToc.chapters);
       return this.moreMenu
         ? this.bookDetails.menu.mixToc.chapters
         : this.bookDetails.menu.mixToc.chapters.slice(0, 29);
