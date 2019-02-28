@@ -1,11 +1,8 @@
 <template>
   <app-layout>
-    <transition name="fade"
-                mode="out-in">
-
+    <transition name="fade" mode="out-in">
       <el-container class="home-warp">
-        <el-aside width="200px"
-                  style="background-color: rgb(238, 241, 246)">
+        <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
           <menu-view></menu-view>
         </el-aside>
         <el-container>
@@ -22,9 +19,9 @@
 </template>
 
 <style lang="scss" rel="stylesheet/scss">
-  @import './index.scss';
+@import "./index.scss";
 </style>
 <script type="text/babel">
-  import vm from './vm';
-  export default vm;
+import vm from "./vm";
+export default vm;
 </script>

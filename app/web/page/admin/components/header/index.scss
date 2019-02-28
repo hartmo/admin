@@ -1,13 +1,15 @@
 @import '../../../../asset/style/mixin.scss';
+
 .m-header {
 	text-align: right;
 	font-size: px2rem(12);
-	background: #6495ed;
-	color: #fff;
+	color: #000;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	border-bottom: 2px solid #dedede;
+
 	.header-icon {
-		color: #fff;
+		color: #000;
 	}
 }

@@ -1,25 +1,16 @@
-
 import menuView from '../components/menu/index';
 import headerView from '../components/header/index';
-import VueRouter from 'vue-router';
-import router from './router';
 export default {
   name: 'index',
-  router,
-  mounted() {
-  },
+  mounted() {},
   watch: {},
   data() {
-    return {
-    };
+    return {};
   },
   components: {
-    menuView, headerView
+    menuView,
+    headerView
   },
-  computed: {
-    indexDate() {
-      return this.$router.options.routes;
-    }
-  },
+  computed: {},
   methods: {},
 };

@@ -5,11 +5,10 @@ const fs = require('fs');
 let exclude = [];
 if (process.env.WEBPACK_ENTRY) {
   // 如果是 none ，则允许只 load home
-  const webpackEntries = process.env.WEBPACK_ENTRY === 'none'
-    ? []
-    : process.env.WEBPACK_ENTRY.split(',');
+  const webpackEntries = process.env.WEBPACK_ENTRY === 'none' ? [] :
+    process.env.WEBPACK_ENTRY.split(',');
 
-  const entries = webpackEntries.concat([ 'home', 'error' ]).map(d => d.trim());
+  const entries = webpackEntries.concat(['home', 'error']).map(d => d.trim());
   const dirList = fs.readdirSync(path.resolve(__dirname, './app/web/page'));
   exclude = dirList.filter(d => !entries.includes(d)).map(d => `app/web/page/${d}`);
 }
@@ -27,6 +26,7 @@ module.exports = {
     framework: 'app/web/framework',
     store: 'app/web/store',
     vue: 'vue/dist/vue.esm.js',
+    admin: 'app/web/admin', // 后台管理
   },
   dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
   loaders: {},
