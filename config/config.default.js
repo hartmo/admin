@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const mysqlConfig = require('../database/config.json');
 module.exports = app => {
   const exports = {};
 
@@ -36,14 +37,6 @@ module.exports = app => {
 
   exports.middleware = ['access'];
 
-  exports.sequelize = {
-    // egg-sequelize 配置
-    dialect: 'mysql', // db type
-    database: 'admin',
-    host: 'localhost',
-    port: '3306',
-    username: 'root',
-    password: 'admin520'
-  };
+  exports.sequelize = mysqlConfig.development;
   return exports;
 };

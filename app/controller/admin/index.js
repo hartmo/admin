@@ -5,7 +5,7 @@ class AppController extends Controller {
    */
   async home() {
     // console.log(ctx.model.Users.findAll());
-    this.ctx.body = '欢迎来到管理后台';
+    this.ctx.body = `欢迎来到管理后台,${this.app.config.env}`;
   }
   /**
    * 后台管理路由

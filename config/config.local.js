@@ -1,8 +1,8 @@
 const path = require('path');
 const ip = require('ip');
+const mysqlConfig = require('../database/config.json');
 module.exports = app => {
   const exports = {};
-
   exports.static = {
     maxAge: 0 // maxAge 缓存，默认 1 年
   };
@@ -24,6 +24,7 @@ module.exports = app => {
     domainWhiteList.push(`http://${localIP}:${port}`);
   });
 
+  exports.sequelize = mysqlConfig.test;
   exports.security = { domainWhiteList };
 
   return exports;
