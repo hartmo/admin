@@ -1,7 +1,6 @@
 export default {
   name: 'index',
   mounted() {
-    console.log(this.$http.get);
   },
   watch: {},
   data() {

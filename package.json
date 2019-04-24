@@ -59,7 +59,7 @@
     "eslint": "^4.3.0",
     "eslint-config-egg": "^5.0.0",
     "eslint-plugin-vue": "^2.0.1",
-    "imagemin-webpack-plugin": "^1.5.2",
+    "imagemin-webpack-plugin": "^1.6.1",
     "ip": "^1.1.5",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
